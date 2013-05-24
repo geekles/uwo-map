@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama id="">
+  <view fovmode="0" pannorth="0">
+    <start pan="155" fov="70" tilt="-3"/>
+    <min pan="-180" fov="5" tilt="-66.49948521546297"/>
+    <max pan="180" fov="120" tilt="66.49948521546297"/>
+  </view>
+  <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+  <hotspots width="180" height="20" wordwrap="1">
+    <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+    <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+    <hotspot title="go down stairs" target="" pan="157.688" skinid="" url="../../b/lounge/lounge.html" id="lounge" tilt="-2.46252"/>
+    <hotspot title="go to Titan Central" target="" pan="121.474" skinid="" url="../titancentral/titancentral.html" id="titancentral" tilt="-0.629919"/>
+    <hotspot title="go to the Marketplace" target="" pan="-145.046" skinid="" url="../marketplace/marketplace.html" id="marketplace" tilt="4.89049"/>
+  </hotspots>
+  <media/>
+  <input tile0url="images/concourse_o_0.jpg" tile5url="images/concourse_o_5.jpg" tilesize="1576" tile4url="images/concourse_o_4.jpg" tile3url="images/concourse_o_3.jpg" tilescale="1.006345177664975" tile2url="images/concourse_o_2.jpg" tile1url="images/concourse_o_1.jpg"/>
+  <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+</panorama>

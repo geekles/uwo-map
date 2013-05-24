@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+   <meta name="Author" content="Ezra Schoonover"/>
+   <title>UW Oshkosh Permanent Plantings Project Map</title>
+   <link rel="shortcut icon" type="image/x-icon" href="http://www.uwosh.edu/map/favicon.ico" />
+   <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAmhElTVGenHYJ62D2vjy_PRRbJimFOXjwfZ7D6AgkUmNWU0eYjBQ2TZWU15_5aphfdVUKxtBi9iMFOg" type="text/javascript"></script>
+
+<style type="text/css">
+html { 
+width: 100% !important;
+height: 100% !important;
+margin: 0;
+padding: 0;
+}
+body { 
+width: 100% !important;
+height: 100% !important;
+margin: 0;
+padding: 0;
+}
+table#twopanes { 
+width: 100% !important;
+height: 100% !important;
+margin: 0;
+padding: 0;
+}
+div#map { 
+width: 100% !important;
+height: 100% !important;
+margin: 0;
+padding: 0;
+}
+#main { 
+width: 100% !important;
+height: 100% !important;
+margin: 0;
+padding: 0;
+}
+.logoimg {
+position: absolute;
+bottom: 20px;
+right: 206px;
+z-index: 10;
+overflow: hidden;
+}
+table.chex {
+border: 0;
+width: 200px !important;
+}
+.right_side {
+background: url("http://www.uwosh.edu/map/uwotreemaplogo.png") top center;
+background-repeat: no-repeat;
+font-size: .6em;
+padding-top: 100px;
+valign: top;
+bottom: 2px;
+width: 200px !important;
+}
+.right_notused {
+font-size: .6em;
+text-align: right;
+valign: top;
+height: 100% !important;
+width: 100px !important;
+margin: 0;
+padding-top: 130px;
+}
+.right_info {
+font-size: 1.25em;
+text-align: center;
+background: #DDDDDD;
+width: 200px !important;
+margin-top: 130px;
+margin-bottom: 4px;
+}
+.right_title {
+font-size: 1.5em;
+text-align: center;
+background: #AADDAA;
+width: 200px !important;
+margin-top: 4px;
+margin-bottom: 4px;
+}
+.checks {
+valign: top;
+width: 92px !important;
+text-align: right;
+margin-right: 4px;
+}
+.chkbx {
+height: .8em;
+width: .8em;
+border: none;
+margin: 0;
+padding-left: 3px;
+}
+.bldgpic {
+width: 200px;
+height: 133px;
+}
+.bldgdata {
+width: 240px;
+font-size: .75em;
+}
+.treepic {
+width: 32px;
+height: 32px;
+position: relative;
+float: right;
+border: none;
+background: url("http://www.uwosh.edu/map/ppp/icon/Shadow.png") ;
+background-repeat: no-repeat;
+}
+.noborder {
+border: none;
+text-decoration: none;
+}
+table.chex tbody tr th img, table.chex tbody tr th a, table.chex tbody tr th a:link, table.chex tbody tr th a:visited, table.chex tbody tr th a:active, table.chex tbody tr th a:hover {
+border:0 none !important;
+color:#000000 !important;
+text-decoration:none !important;
+}
+table.chex tbody tr th span {
+font-size: 1.5em;
+display: block;
+border: 1px dashed !important;
+color: #000099 !important;
+background: #eeeeee;
+margin: 12px 8px 4px 8px !important;
+padding: 4px 2px !important;
+}
+</style>
+  </head>
+  <body onunload="GUnload()">
+   <table id="twopanes"><tr><td id="main"><img class="logoimg" src="http://www.uwosh.edu/facilities/map/uwoOverlay.png">
+    <div id="map" ></div></td><td class="right_side">
+    <form action="#">
+<table class="chex"><tr><td class="right_info" colspan="2">Turn the icons on and off <br/>by clicking the checkboxes.
+</td></tr>
+<tr><td colspan="2" class="right_title">Deciduous</td></tr>
+<tr><th class="checks">
+Apple: <input type="checkbox" class="chkbx" id="Pyrusbox" onclick="boxclick(this,'Pyrus')" /><br />
+Ash: <input type="checkbox" class="chkbx" id="Fraxinusbox" onclick="boxclick(this,'Fraxinus')" /><br />
+<em>Cottonwood -or- &nbsp;&nbsp;</em><br />
+Aspen: <input type="checkbox" class="chkbx" id="Populusbox" onclick="boxclick(this,'Populus')" /><br />
+Basswood: <input type="checkbox" class="chkbx" id="Tiliabox" onclick="boxclick(this,'Tilia')" /><br />
+Beech: <input type="checkbox" class="chkbx" id="Fagusbox" onclick="boxclick(this,'Fagus')" /><br />
+Birch: <input type="checkbox" class="chkbx" id="Betulabox" onclick="boxclick(this,'Betula')" /><br />
+Catalpa: <input type="checkbox" class="chkbx" id="Catalpabox" onclick="boxclick(this,'Catalpa')" /><br />
+Coffeetree: <input type="checkbox" class="chkbx" id="Gymnocladusbox" onclick="boxclick(this,'Gymnocladus')" /><br />
+Cork: <input type="checkbox" class="chkbx" id="Phellowbox" onclick="boxclick(this,'Phellow')" /><br />
+Elm: <input type="checkbox" class="chkbx" id="Ulmusbox" onclick="boxclick(this,'Ulmus')" /><br />
+Ginkgo: <input type="checkbox" class="chkbx" id="Ginkgobox" onclick="boxclick(this,'Ginkgo')" /><br />
+Hackberry: <input type="checkbox" class="chkbx" id="Celtisbox" onclick="boxclick(this,'Celtis')" /><br />
+</th><th class="checks">
+Hickory: <input type="checkbox" class="chkbx" id="Caryabox" onclick="boxclick(this,'Carya')" /><br />
+Honeylocust: <input type="checkbox" class="chkbx" id="Gleditsiabox" onclick="boxclick(this,'Gleditsia')" /><br />
+Hornbeam: <input type="checkbox" class="chkbx" id="Carpinusbox" onclick="boxclick(this,'Carpinus')" /><br />
+Horsechestnut: <input type="checkbox" class="chkbx" id="Aesculusbox" onclick="boxclick(this,'Aesculus')" /><br />
+Katsura: <input type="checkbox" class="chkbx" id="Cercidiphyllumbox" onclick="boxclick(this,'Cercidiphyllum')" /><br />
+Maple: <input type="checkbox" class="chkbx" id="Acerbox" onclick="boxclick(this,'Acer')" /><br />
+Mulberry: <input type="checkbox" class="chkbx" id="Morusbox" onclick="boxclick(this,'Morus')" /><br />
+Oak: <input type="checkbox" class="chkbx" id="Quercusbox" onclick="boxclick(this,'Quercus')" /><br />
+Poplar: <input type="checkbox" class="chkbx" id="Liriodendronbox" onclick="boxclick(this,'Liriodendron')" /><br />
+Redbud: <input type="checkbox" class="chkbx" id="Cercisbox" onclick="boxclick(this,'Cercis')" /><br />
+Sycamore: <input type="checkbox" class="chkbx" id="Platanusbox" onclick="boxclick(this,'Platanus')" /><br />
+Walnut: <input type="checkbox" class="chkbx" id="Juglansbox" onclick="boxclick(this,'Juglans')" /><br />
+Willow: <input type="checkbox" class="chkbx" id="Salixbox" onclick="boxclick(this,'Salix')" /><br />
+</th></tr>
+<tr><td colspan="2" class="right_title">Coniferous</td></tr>
+<tr><th class="checks">
+Cedar: <input type="checkbox" class="chkbx" id="Thujabox" onclick="boxclick(this,'Thuja')" /><br />
+Cypress: <input type="checkbox" class="chkbx" id="Taxodiumbox" onclick="boxclick(this,'Taxodium')" /><br />
+Douglas Fir: <input type="checkbox" class="chkbx" id="Pseudotsugabox" onclick="boxclick(this,'Pseudotsuga')" /><br />
+Fir: <input type="checkbox" class="chkbx" id="Abiesbox" onclick="boxclick(this,'Abies')" /><br />
+Hemlock: <input type="checkbox" class="chkbx" id="Tsugabox" onclick="boxclick(this,'Tsuga')" /><br />
+</th><th class="checks">
+Juniper: <input type="checkbox" class="chkbx" id="Juniperusbox" onclick="boxclick(this,'Juniperus')" /><br />
+Larch: <input type="checkbox" class="chkbx" id="Larixbox" onclick="boxclick(this,'Larix')" /><br />
+Pine: <input type="checkbox" class="chkbx" id="Pinusbox" onclick="boxclick(this,'Pinus')" /><br />
+Spruce: <input type="checkbox" class="chkbx" id="Piceabox" onclick="boxclick(this,'Picea')" /><br />
+Yew: <input type="checkbox" class="chkbx" id="Taxusbox" onclick="boxclick(this,'Taxus')" /><br />
+</th></tr>
+<tr><td colspan="2" class="right_title">Shrub - Other</td></tr>
+<tr><th class="checks">
+Arrow wood: <input type="checkbox" class="chkbx" id="Viburnumbox" onclick="boxclick(this,'Viburnum')" /><br />
+Blank: <input type="checkbox" class="chkbx" id="Blankbox" onclick="boxclick(this,'Blank')" /><br />
+Cherry: <input type="checkbox" class="chkbx" id="Prunusbox" onclick="boxclick(this,'Prunus')" /><br />
+Crabapple: <input type="checkbox" class="chkbx" id="Malusbox" onclick="boxclick(this,'Malus')" /><br />
+Dogwood: <input type="checkbox" class="chkbx" id="Cornusbox" onclick="boxclick(this,'Cornus')" /><br />
+Elderberry: <input type="checkbox" class="chkbx" id="Sambucusbox" onclick="boxclick(this,'Sambucus')" /><br />
+Euro Ash: <input type="checkbox" class="chkbx" id="Sorbusbox" onclick="boxclick(this,'Sorbus')" /><br />
+Fringetree: <input type="checkbox" class="chkbx" id="Chionanthusbox" onclick="boxclick(this,'Chionanthus')" /><br />
+Hawthorn: <input type="checkbox" class="chkbx" id="Crataegusbox" onclick="boxclick(this,'Crataegus')" /><br />
+</th><th class="checks">
+Hercules Club: <input type="checkbox" class="chkbx" id="Zanthoxylumbox" onclick="boxclick(this,'Zanthoxylum')" /><br />
+Ironwood: <input type="checkbox" class="chkbx" id="Ostryabox" onclick="boxclick(this,'Ostrya')" /><br />
+Lilac: <input type="checkbox" class="chkbx" id="Syringabox" onclick="boxclick(this,'Syringa')" /><br />
+Magnolia: <input type="checkbox" class="chkbx" id="Magnoliabox" onclick="boxclick(this,'Magnolia')" /><br />
+Olive: <input type="checkbox" class="chkbx" id="Elaeagnusbox" onclick="boxclick(this,'Elaeagnus')" /><br />
+Osage: <input type="checkbox" class="chkbx" id="Maclurabox" onclick="boxclick(this,'Maclura')" /><br />
+Serviceberry: <input type="checkbox" class="chkbx" id="Amelanchierbox" onclick="boxclick(this,'Amelanchier')" /><br />
+Sumac: <input type="checkbox" class="chkbx" id="Rhusbox" onclick="boxclick(this,'Rhus')" /><br />
+</th></tr>
+<tr><td colspan="2" class="right_title">Other Map Info</td></tr>
+<tr><th>
+<a class="noborder" href="http://uwosh.edu/map/">
+<img class="noborder" src="http://www.uwosh.edu/map/Infobooth.png"><br>Campus Map</a>
+</th><th>
+<a class="noborder" href="http://www.uwosh.edu/map/PPP.kml">
+<img class="noborder" src="http://www.uwosh.edu/map/gearth-icon.png"><br>KML Tree Map</a>
+</th></tr><br/>
+<tr><th><span class=hoverinfo">
+<acronym title="Diameter At Breast-height -or- spread diameter">DBH</acronym>
+</span></th><th><span class=hoverinfo">
+<acronym title="zero = existing, one = old age / removed, two = construction project / removed">Status</acronym>
+</span></th></tr><tr><th><br/>
+<a target="_blank" href="http://www.uwosh.edu/map/campus_map_guide.htm"><img src="http://www.uwosh.edu/map/Guide.png" alt="How to use this map" title="Need help using this map?"/><br />How to use<br/>this map</a>
+</th><th>
+<a target="_blank" href="http://www.uwosh.edu/map/about.htm"><img src="http://www.uwosh.edu/map/About.png" alt="About the map" title="Information about the making of this map"/><br />About the map</a>
+</th></tr></table>
+    </form>
+</td></tr></table>
+
+    <noscript><b>JavaScript must be enabled in order for you to use Google Maps.</b> 
+      However, it seems JavaScript is either disabled or not supported by your browser. 
+      To view Google Maps, enable JavaScript by changing your browser options, and then 
+      try again.
+    </noscript>
+ 
+    <script type="text/javascript">
+    //<![CDATA[
+      // === Many script ideas gleaned from mapki.com
+      // === and econym.org.uk/gmap/
+      // === To Do List:  Checkbox to toggle all Deciduous, Carniferous and Shrubs/Other if possible.. maybe jquery?
+      // === Data of all tree markers is in GIS Lab server.  Figure out how to push xml every week/month?  
+
+    if (GBrowserIsCompatible()) {
+
+      var ppolys = [];
+      var plabels = [];
+      var bpolys = [];
+      var blabels = [];
+      var spolys = [];
+      var slabels = [];
+      var wpolys = [];
+
+      // === A method for testing if a point is inside a polygon
+      // === Returns true if poly contains point
+      // === Algorithm shamelessly stolen from http://alienryderflex.com/polygon/ 
+      GPolygon.prototype.Contains = function(point) {
+        var j=0;
+        var oddNodes = false;
+        var x = point.lng();
+        var y = point.lat();
+        for (var i=0; i < this.getVertexCount(); i++) {
+          j++;
+          if (j == this.getVertexCount()) {j = 0;}
+          if (((this.getVertex(i).lat() < y) && (this.getVertex(j).lat() >= y))
+          || ((this.getVertex(j).lat() < y) && (this.getVertex(i).lat() >= y))) {
+            if ( this.getVertex(i).lng() + (y - this.getVertex(i).lat())
+            /  (this.getVertex(j).lat()-this.getVertex(i).lat())
+            *  (this.getVertex(j).lng() - this.getVertex(i).lng())<x ) {
+              oddNodes = !oddNodes
+            }
+          }
+        }
+        return oddNodes;
+      }
+
+
+
+      // Display the map, with some controls and set the initial location 
+      var map = new GMap2(document.getElementById("map"));
+    map.addMapType(G_PHYSICAL_MAP);
+    map.addMapType(G_SATELLITE_3D_MAP);
+    map.removeMapType(G_HYBRID_MAP);
+    map.addControl(new GSmallMapControl());
+    map.addControl(new GHierarchicalMapTypeControl());
+    map.addControl(new GScaleControl());
+    map.setCenter(new GLatLng( 44.0253,-88.553), 17);
+    map.enableScrollWheelZoom();
+
+
+      GEvent.addListener(map, "click", function(overlay,point) {
+        if (!overlay) {
+          for (var i=0; i<bpolys.length; i++) {
+            if (bpolys[i].Contains(point)) {
+              map.openInfoWindowHtml(point, blabels[i]);
+              //i = 9999; // Jump out of loop
+            }
+          }
+        }
+      });
+
+      GEvent.addListener(map, "click", function(overlay,point) {
+        if (!overlay) {
+          for (var i=0; i<ppolys.length; i++) {
+            if (ppolys[i].Contains(point)) {
+              map.openInfoWindowHtml(point,"This is "+plabels[i]);
+              //i = 9999; // Jump out of loop
+            }
+          }
+        }
+      });
+
+      GEvent.addListener(map, "click", function(overlay,point) {
+        if (!overlay) {
+          for (var i=0; i<spolys.length; i++) {
+            if (spolys[i].Contains(point)) {
+              map.openInfoWindowHtml(point,"This is "+slabels[i]);
+              //i = 9999; // Jump out of loop
+            }
+          }
+        }
+      });
+   
+
+      // Read the data from campus.xml
+      
+      var request = GXmlHttp.create();
+      request.open("GET", "http://www.uwosh.edu/map/campus.xml", true);
+      request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+          var xmlDoc = GXml.parse(request.responseText);
+          
+          // ========= Now process the walkway polygons ===========
+          var walkway = xmlDoc.documentElement.getElementsByTagName("walk");
+
+          // read each line
+          for (var c = 0; c < walkway.length; c++) {
+            // get any walk attributes
+            var colour = walkway[c].getAttribute("colour");
+            // read each point on that line
+            var points = walkway[c].getElementsByTagName("point");
+            var pts = [];
+            for (var w = 0; w < points.length; w++) {
+               pts[w] = new GLatLng(parseFloat(points[w].getAttribute("lat")),
+                                   parseFloat(points[w].getAttribute("lng")));
+            }
+            var wpoly = new GPolygon(pts,"#000000",0,0,colour,0.5,{clickable:true});
+            spolys.push(wpoly);
+            map.addOverlay(wpoly);
+          }
+          
+          // ========= Now process the parking polygons ===========
+          var parking = xmlDoc.documentElement.getElementsByTagName("pkng");
+
+          // read each line
+          for (var b = 0; b < parking.length; b++) {
+            // get any pkng attributes
+            var plabel  = parking[b].getAttribute("name");
+            var colour = parking[b].getAttribute("colour");
+            // read each point on that line
+            var points = parking[b].getElementsByTagName("point");
+            var pts = [];
+            for (var k = 0; k < points.length; k++) {
+               pts[k] = new GLatLng(parseFloat(points[k].getAttribute("lat")),
+                                   parseFloat(points[k].getAttribute("lng")));
+            }
+            var ppoly = new GPolygon(pts,"#000000",1,0.5,colour,1,{clickable:false});
+            ppolys.push(ppoly);
+            plabels.push(plabel);
+            map.addOverlay(ppoly);
+          }
+
+          // ========= Now process the building polygons ===========
+          var buildings = xmlDoc.documentElement.getElementsByTagName("bldg");
+
+          // read each line
+          for (var a = 0; a < buildings.length; a++) {
+            // get any bldg attributes
+		var blabel = GXml.value(buildings[a].getElementsByTagName("description")[0]);
+            var colour = buildings[a].getAttribute("colour");
+            // read each point on that line
+            var points = buildings[a].getElementsByTagName("point");
+            var pts = [];
+            for (var i = 0; i < points.length; i++) {
+               pts[i] = new GLatLng(parseFloat(points[i].getAttribute("lat")),
+                                   parseFloat(points[i].getAttribute("lng")));
+            }
+            var bpoly = new GPolygon(pts,"#000000",1,1,colour,0.5,{clickable:false});
+            bpolys.push(bpoly);
+            blabels.push(blabel);
+            map.addOverlay(bpoly);
+          }
+
+          // ========= Now process the sport field polygons ===========
+          var sport = xmlDoc.documentElement.getElementsByTagName("sprt");
+
+          // read each line
+          for (var s = 0; s < sport.length; s++) {
+            // get any sprt attributes
+            var slabel  = sport[s].getAttribute("name");
+            var colour = sport[s].getAttribute("colour");
+            // read each point on that line
+            var points = sport[s].getElementsByTagName("point");
+            var pts = [];
+            for (var m = 0; m < points.length; m++) {
+               pts[m] = new GLatLng(parseFloat(points[m].getAttribute("lat")),
+                                   parseFloat(points[m].getAttribute("lng")));
+            }
+            var spoly = new GPolygon(pts,"#000000",0,0,colour,0.5,{clickable:false});
+            spolys.push(spoly);
+            slabels.push(slabel);
+            map.addOverlay(spoly);
+          }
+
+          // ================================================           
+        }
+      }
+      request.send(null);
+
+    }
+    
+    // display a warning if the browser was not compatible
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    //]]>
+    </script>
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+    if (GBrowserIsCompatible()) {
+
+      var gmarkers = [];
+      var gicons = [];
+      var i = 0;
+      var treeIcon = new GIcon();
+        treeIcon.image = "http://www.uwosh.edu/map/ppp/icon/Blank.png";
+        treeIcon.iconSize = new GSize(32, 32);
+        treeIcon.shadowSize = new GSize(32, 32);
+        treeIcon.iconAnchor = new GPoint(16, 16);
+        treeIcon.infoWindowAnchor = new GPoint(16, 8);
+        //treeIcon.infoShadowAnchor = new GPoint(16, 24);
+
+      gicons["Abies"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Abies.png");
+      gicons["Acer"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Acer.png");
+      gicons["Aesculus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Aesculus.png");
+      gicons["Amelanchier"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Amelanchier.png");
+      gicons["Betula"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Betula.png");
+      gicons["Blank"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Blank.png");
+      gicons["Carpinus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Carpinus.png");
+      gicons["Carya"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Carya.png");
+      gicons["Catalpa"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Catalpa.png");
+      gicons["Celtis"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Celtis.png");
+      gicons["Cercis"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Cercis.png");
+      gicons["Cercidiphyllum"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Cercidiphyllum.png");
+      gicons["Chionanthus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Chionanthus.png");
+      gicons["Cornus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Cornus.png");
+      gicons["Crataegus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Crataegus.png");
+      gicons["Elaeagnus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Elaeagnus.png");
+      gicons["Fagus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Fagus.png");
+      gicons["Fraxinus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Fraxinus.png");
+      gicons["Ginkgo"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Ginkgo.png");
+      gicons["Gleditsia"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Gleditsia.png");
+      gicons["Gymnocladus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Gymnocladus.png");
+      gicons["Juglans"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Juglans.png");
+      gicons["Juniperus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Juniperus.png");
+      gicons["Larix"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Larix.png");
+      gicons["Liriodendron"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Liriodendron.png");
+      gicons["Maclura"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Maclura.png");
+      gicons["Magnolia"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Magnolia.png");
+      gicons["Malus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Malus.png");
+      gicons["Morus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Morus.png");
+      gicons["Ostrya"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Ostrya.png");
+      gicons["Phellow"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Phellow.png");
+      gicons["Picea"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Picea.png");
+      gicons["Pinus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Pinus.png");
+      gicons["Platanus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Platanus.png");
+      gicons["Populus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Populus.png");
+      gicons["Prunus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Prunus.png");
+      gicons["Pseudotsuga"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Pseudotsuga.png");
+      gicons["Pyrus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Pyrus.png");
+      gicons["Quercus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Quercus.png");
+      gicons["Rhus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Rhus.png");
+      gicons["Salix"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Salix.png");
+      gicons["Sambucus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Sambucus.png");
+      gicons["Sorbus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Sorbus.png");
+      gicons["Syringa"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Syringa.png");
+      gicons["Taxodium"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Taxodium.png");
+      gicons["Taxus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Taxus.png");
+      gicons["Thuja"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Thuja.png");
+      gicons["Tilia"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Tilia.png");
+      gicons["Tsuga"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Tsuga.png");
+      gicons["Ulmus"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Ulmus.png");
+      gicons["Viburnum"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Viburnum.png");
+      gicons["Zanthoxylum"] = new GIcon(treeIcon,"http://www.uwosh.edu/map/ppp/icon/Zanthoxylum.png");
+
+      // A function to create the marker and set up the event window
+      function createMarker(point,name,html,category) {
+        var marker = new GMarker(point,gicons[category]);
+        // === Store the category and name info as a marker properties ===
+        marker.mycategory = category;                                 
+        marker.myname = name;
+        GEvent.addListener(marker, "click", function() {
+          marker.openInfoWindowHtml(html);
+        });
+        gmarkers.push(marker);
+        return marker;
+      }
+
+      // == shows all markers of a particular category, and ensures the checkbox is checked ==
+      function show(category) {
+        for (var i=0; i<gmarkers.length; i++) {
+          if (gmarkers[i].mycategory == category) {
+            gmarkers[i].show();
+          }
+        }
+        // == check the checkbox ==
+        document.getElementById(category+"box").checked = true;
+      }
+
+      // == hides all markers of a particular category, and ensures the checkbox is cleared ==
+      function hide(category) {
+        for (var i=0; i<gmarkers.length; i++) {
+          if (gmarkers[i].mycategory == category) {
+            gmarkers[i].hide();
+          }
+        }
+        // == clear the checkbox ==
+        document.getElementById(category+"box").checked = false;
+        // == close the info window, in case its open on a marker that we just hid
+        map.closeInfoWindow();
+      }
+
+      // == a checkbox has been clicked ==
+      function boxclick(box,category) {
+        if (box.checked) {
+          show(category);
+        } else {
+          hide(category);
+        }
+        // == rebuild the side bar
+      }
+
+      function myclick(i) {
+        GEvent.trigger(gmarkers[i],"click");
+      }
+
+      // Read the data
+      GDownloadUrl("http://www.uwosh.edu/map/campustrees.xml", function(doc) {
+        var xmlDoc = GXml.parse(doc);
+        var markers = xmlDoc.documentElement.getElementsByTagName("marker");
+          
+        for (var i = 0; i < markers.length; i++) {
+          // obtain the attribues of each marker
+          var lat = parseFloat(markers[i].getAttribute("lat"));
+          var lng = parseFloat(markers[i].getAttribute("lng"));
+          var point = new GLatLng(lat,lng);
+          var info = markers[i].getAttribute("info");
+          var name = markers[i].getAttribute("name");
+          var html = "<b>"+name+"</b><br />"+info;
+          var category = markers[i].getAttribute("category");
+          // create the marker
+          var marker = createMarker(point,name,html,category);
+          map.addOverlay(marker);
+        }
+
+        // == show or hide the categories initially ==
+show("Abies");
+show("Acer");
+show("Aesculus");
+show("Amelanchier");
+show("Betula");
+show("Blank");
+show("Carpinus");
+show("Carya");
+show("Catalpa");
+show("Celtis");
+show("Cercis");
+show("Cercidiphyllum");
+show("Chionanthus");
+show("Cornus");
+show("Crataegus");
+show("Elaeagnus");
+show("Fagus");
+show("Fraxinus");
+show("Ginkgo");
+show("Gleditsia");
+show("Gymnocladus");
+show("Juglans");
+show("Juniperus");
+show("Larix");
+show("Liriodendron");
+show("Maclura");
+show("Magnolia");
+show("Malus");
+show("Morus");
+show("Ostrya");
+show("Phellow");
+show("Picea");
+show("Pinus");
+show("Platanus");
+show("Populus");
+show("Prunus");
+show("Pseudotsuga");
+show("Pyrus");
+show("Quercus");
+show("Rhus");
+show("Salix");
+show("Sambucus");
+show("Sorbus");
+show("Syringa");
+show("Taxodium");
+show("Taxus");
+show("Thuja");
+show("Tilia");
+show("Tsuga");
+show("Ulmus");
+show("Viburnum");
+show("Zanthoxylum");
+
+      });
+    }
+
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    //]]>
+    </script>
+
+
+  </body>
+
+</html>

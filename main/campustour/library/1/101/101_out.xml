@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama id="">
+  <view fovmode="0" pannorth="0">
+    <start pan="0" fov="70" tilt="-8.5"/>
+    <min pan="-180" fov="5" tilt="-65.49989487775071"/>
+    <max pan="180" fov="120" tilt="65.49989487775071"/>
+  </view>
+  <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+  <hotspots width="180" height="20" wordwrap="1">
+    <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+    <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+    <hotspot title="go down the hall" target="" pan="-126.737" skinid="" url="../hall/hall.html" id="hall" tilt="0.968372"/>
+    <hotspot title="go to the second floor" target="" pan="-96.47920000000001" skinid="" url="../../2/floor2/floor2.html" id="floor2" tilt="-1.56073"/>
+    <hotspot title="go to the third floor" target="" pan="-93.1332" skinid="" url="../../3/floor3/floor3.html" id="floor3" tilt="1.32117"/>
+  </hotspots>
+  <media/>
+  <input tile0url="images/101_o_0.jpg" tile5url="images/101_o_5.jpg" tilesize="1504" tile4url="images/101_o_4.jpg" tile3url="images/101_o_3.jpg" tilescale="1.006648936170213" tile2url="images/101_o_2.jpg" tile1url="images/101_o_1.jpg"/>
+  <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+</panorama>

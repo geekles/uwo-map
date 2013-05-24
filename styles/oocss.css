@@ -1,0 +1,230 @@
+/* oo-css */ 
+
+/* **************** TEMPLATE ***************** */
+/* ====== Page Head, Body, and Foot ====== */
+body{_text-align:center;}/* IE5.5 */
+.oo-main{display:table-cell;*display:block;width:auto;}
+.oo-body,.oo-main{*zoom:1;}
+.oo-body:after,.oo--main:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.oo-page{margin:0 auto;width:950px;_text-align:left;} /* wraps other template elems to set width */ /* text-align IE5.5 */
+/* "old school" and "liquid" extend page to allow for different page widths */
+.oo-classic{width:750px;}
+.oo-gs960{width:960px;}
+.oo-liquid{width:auto;margin:0;}
+/* ====== Columns ====== */
+.oo-leftCol{float:left;width:250px;_margin-right:-3px;}
+.oo-rightCol{float:right;width:300px;_margin-left:-3px;}
+/* extend columns to allow for common column widths */
+.oo-col160{width:160px;}
+.oo-col180{width:180px;}
+.oo-col240{width:240px;}
+.oo-col300{width:300px;}
+
+/* ====== FLOATS ====== */
+.oo-fl{float:left;}
+.oo-fr{float:right;}
+.oo-cb{clear:both;}
+
+
+/* **************** GRIDS ***************** */
+.oo-line:after,.oo-lastUnit:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.oo-line{*zoom:1;}
+.oo-unit{float:left;}
+.oo-size1of1{float:none;}
+.oo-size1of2{width:50%;}
+.oo-size1of3{width:33.33333%;}d
+.oo-size2of3{width:66.66666%;}
+.oo-size1of4{width:25%;}
+.oo-size3of4{width:75%;}
+.oo-size1of5{width:20%;}
+.oo-size2of5{width:40%;}
+.oo-size3of5{width:60%;}
+.oo-size4of5{width:80%;}
+.oo-lastUnit{display:table-cell;float:none;width:auto;*display:block;*zoom:1;_position:relative;_left:-3px;_margin-right:-3px;}
+
+/* ====== media (requires mod.css) ====== */
+.oo-media{margin: 10px;}
+.oo-media:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.oo-media .oo-img{float:left;/*margin-right: 10px;*/}
+.oo-media .oo-img img{display:block;}
+.oo-media .oo-imgExt{float:right; /*margin-left: 10px;*/}
+
+body{font-family:Helvetica, Verdana, Lucida, Arial, sans-serif;}
+/* **************** CONTENT OBJECTS ***************** */
+
+/* ====== Elements ====== */
+img{display:block;}
+em{font-style: italic;}
+strong{font-weight:bold;}
+hr{border: 5px solid #e2e2e2; border-width: 0 0 5px 0; margin: 20px 10px 10px 10px;}
+code{color:#0B8C8F;}
+
+.oo-important a{font-weight:bold;}/* what is this? */
+/* links */
+a {color: #000; text-decoration: none;}
+a:focus, a:hover {text-decoration: underline;}
+a:focus{background-color:#FFFFCC;}
+a:visited { color:#333; }
+/* ====== Lists ======*/
+/* numbered list */
+ol.oo-simpleList li{list-style-type: decimal; margin-left:40px;}
+/* standard list */
+ul.oo-simpleList li{list-style-type:disc; margin-left:40px;}
+/* horizontal basic inline nav */
+ul.oo-simpleHList li{list-style-type:none; display:inline-block;}
+/* horizontal basic floated nav */
+ul.oo-simpleHFloatList li{list-style-type:none; float:left;}
+/* clean list */
+ul.oo-cleanList li{list-style-type:none;}
+
+/* ====== blockquote ====== */
+cite{display:block; text-align:right; padding-top: 10px;}
+/* ====== callout ====== */
+.oo-callout{font-size:189%;color:#999999; font-style:italic;}
+.oo-callout cite{display:block; text-align:right;padding-top: 30px; font-size:69.25%;}
+.oo-callout span.oo-quot{font-size: 500%; vertical-align: sub; color:#e2e2e2; line-height:25px; font-weight:bold;}
+.oo-callout span.oo-quotLast{vertical-align:middle;}
+/* ====== image treatments (get more from jason santa maria) ====== */
+.oo-caption{font-size:13px; color:#666666; font-style:italic;padding-top:0;}
+/* will need to either
+1. find a way to capture the width of the caption in the width of the image or flash
+2. Set some default widths, mby use flickr widths?
+*/
+/* ====== special formatting classes ====== */
+.oo-detail{color: #777; font-size:11px;display:block;}
+/* ====== images ====== */
+.oo-icon{margin-right: 5px;}
+
+/* ====== Headings ====== */
+/* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+h1, .oo-h1{font-size:196%; font-weight:normal; font-style: normal; color:#000000;}
+h2, .oo-h2{font-size:167%; font-weight:normal; font-style: normal; color:#CC660B;}
+h3, .oo-h3{font-size:146.5%; font-weight:normal; font-style: normal; color:#000000;}
+h4, .oo-h4{font-size:123.1%; font-weight:normal; font-style: normal; color: #333;}
+h5, .oo-h5{font-size:108%; font-weight:bold; font-style: normal; color:#CC660;}
+h6, .oo-h6{font-size:108%; font-weight:normal; font-style: italic; color:#333;}
+/* if additional headings are needed they should be created via additional classes, never via location dependant styling */
+.oo-category{font-size:108%; font-weight:normal; font-style: normal; text-transform:uppercase; color: #333;}
+.oo-category a{color: #333;}
+
+/** 
+ * Spacing classes 
+ * Should be used to modify the default spacing between objects (not between nodes of the same object)
+ * Please use judiciously. You want to be using defaults most of the time, these are exceptions! 
+ * <type><location><size>
+ */
+ /* ====== Default spacing ====== */
+h1, h2, h3, h4, h5, h6, ul, ol,dl, p,blockquote, .oo-media {margin:10px;}
+h1, h2, h3, h4, h5, h6,img{padding-bottom:0px;}
+pre{margin: 10px;}
+table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl{padding:0;}
+ 
+/* spacing helpers
+p,m = padding,margin
+a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
+s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
+*/
+
+.oo-ptn,.oo-pvn,.oo-pan{padding-top:0px}
+.oo-pts,.oo-pvs,.oo-pas{padding-top:5px}
+.oo-ptm,.oo-pvm,.oo-pam{padding-top:10px}
+.oo-ptl,.oo-pvl,.oo-pal{padding-top:20px}
+.oo-prn,.oo-phn,.oo-pan{padding-right:0px}
+.oo-prs,.oo-phs,.oo-pas{padding-right:5px}
+.oo-prm,.oo-phm,.oo-pam{padding-right:10px}
+.oo-prl,.oo-phl,.oo-pal{padding-right:20px}
+.oo-pbn,.oo-pvn,.oo-pan{padding-bottom:0px}  
+.oo-pbs,.oo-pvs,.oo-pas{padding-bottom:5px}
+.oo-pbm,.oo-pvm,.oo-pam{padding-bottom:10px}
+.oo-pbl,.oo-pvl,.oo-pal{padding-bottom:20px}
+.oo-pln,.oo-phn,.oo-pan{padding-left:0px}
+.oo-pls,.oo-phs,.oo-pas{padding-left:5px}
+.oo-plm,.oo-phm,.oo-pam{padding-left:10px}
+.oo-pll,.oo-phl,.oo-pal{padding-left:20px}
+.oo-mtn,.oo-mvn,.oo-man{margin-top:0px}
+.oo-mts,.oo-mvs,.oo-mas{margin-top:5px}
+.oo-mtm,.oo-mvm,.oo-mam{margin-top:10px}
+.oo-mtl,.oo-mvl,.oo-mal{margin-top:20px}
+.oo-mrn,.oo-mhn,.oo-man{margin-right:0px}
+.oo-mrs,.oo-mhs,.oo-mas{margin-right:5px}
+.oo-mrm,.oo-mhm,.oo-mam{margin-right:10px}
+.oo-mrl,.oo-mhl,.oo-mal{margin-right:20px}
+.oo-mbn,.oo-mvn,.oo-man{margin-bottom:0px}  
+.oo-mbs,.oo-mvs,.oo-mas{margin-bottom:5px}
+.oo-mbm,.oo-mvm,.oo-mam{margin-bottom:10px}
+.oo-mbl,.oo-mvl,.oo-mal{margin-bottom:20px}
+.oo-mln,.oo-mhn,.oo-man{margin-left:0px}
+.oo-mls,.oo-mhs,.oo-mas{margin-left:5px}
+.oo-mlm,.oo-mhm,.oo-mam{margin-left:10px}
+.oo-mll,.oo-mhl,.oo-mal{margin-left:20px}
+
+/*  border helpers
+b = border
+a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
+s,m,l,n = small(1px),medium(5px),large(10px),none(0px)
+b,w,g = black(#000000),white(#FFFFFF),grey(#CCCCCC)
+*/
+.oo-btnb,.oo-btnw,.oo-btng,.oo-bvnb,.oo-bvnw,.oo-bvng,.oo-banb,.oo-banw,.oo-bang{border-top-width:0px;}
+.oo-btsb,.oo-btsw,.oo-btsg,.oo-bvsb,.oo-bvsw,.oo-bvsg,.oo-basb,.oo-basw,.oo-basg{border-top-width:1px;}
+.oo-btmb,.oo-btmw,.oo-btmg,.oo-bvmb,.oo-bvmw,.oo-bvmg,.oo-bamb,.oo-bamw,.oo-bamg{border-top-width:3px;}
+.oo-btlb,.oo-btlw,.oo-btlg,.oo-bvlb,.oo-bvlw,.oo-bvlg,.oo-balb,.oo-balw,.oo-balg{border-top-width:5px;}
+.oo-brnb,.oo-brnw,.oo-brng,.oo-bhnb,.oo-bhnw,.oo-bhng,.oo-banb,.oo-banw,.oo-bang{border-right-width:0px;}
+.oo-brsb,.oo-brsw,.oo-brsg,.oo-bhsb,.oo-bhsw,.oo-bhsg,.oo-basb,.oo-basw,.oo-basg{border-right-width:1px;}
+.oo-brmb,.oo-brmw,.oo-brmg,.oo-bhmb,.oo-bhmw,.oo-bhmg,.oo-bamb,.oo-bamw,.oo-bamg{border-right-width:5px;}
+.oo-brlb,.oo-brlw,.oo-brlg,.oo-bhlb,.oo-bhlw,.oo-bhlg,.oo-balb,.oo-balw,.oo-balg{border-right-width:10px;}
+.oo-bbnb,.oo-bbnw,.oo-bbng,.oo-bvnb,.oo-bvnw,.oo-bvng,.oo-banb,.oo-banw,.oo-bang{border-bottom-width:0px;}
+.oo-bbsb,.oo-bbsw,.oo-bbsg,.oo-bvsb,.oo-bvsw,.oo-bvsg,.oo-basb,.oo-basw,.oo-basg{border-bottom-width:1px;}
+.oo-bbmb,.oo-bbmw,.oo-bbmg,.oo-bvmb,.oo-bvmw,.oo-bvmg,.oo-bamb,.oo-bamw,.oo-bamg{border-bottom-width:5px;}
+.oo-bblb,.oo-bblw,.oo-bblg,.oo-bvlb,.oo-bvlw,.oo-bvlg,.oo-balb,.oo-balw,.oo-balg{border-bottom-width:10px;}
+.oo-blnb,.oo-blnw,.oo-blng,.oo-bhnb,.oo-bhnw,.oo-bhng,.oo-banb,.oo-banw,.oo-bang{border-left-width:0px;}
+.oo-blsb,.oo-blsw,.oo-blsg,.oo-bhsb,.oo-bhsw,.oo-bhsg,.oo-basb,.oo-basw,.oo-basg{border-left-width:1px;}
+.oo-blmb,.oo-blmw,.oo-blmg,.oo-bhmb,.oo-bhmw,.oo-bhmg,.oo-bamb,.oo-bamw,.oo-bamg{border-left-width:5px;}
+.oo-bllb,.oo-bllw,.oo-bllg,.oo-bhlb,.oo-bhlw,.oo-bhlg,.oo-balb,.oo-balw,.oo-balg{border-left-width:10px;}
+.oo-blnb,.oo-blsb,.oo-blmb,.oo-bllb,.oo-btnb,.oo-btsb,.oo-btmb,.oo-btlb,.oo-brnb,.oo-brsb,.oo-brmb,.oo-brlb,
+.oo-bbnb,.oo-bbsb,.oo-bbmb,.oo-bblb,.oo-bhnb,.oo-bhsb,.oo-bhmb,.oo-bhlb,.oo-bvnb,.oo-bvsb,.oo-bvmb,.oo-bvlb,
+.oo-banb,.oo-basb,.oo-bamb,.oo-balb{border-color:#000000;}
+.oo-blnw,.oo-blsw,.oo-blmw,.oo-bllw,.oo-btnw,.oo-btsw,.oo-btmw,.oo-btlw,.oo-brnw,.oo-brsw,.oo-brmw,.oo-brlw,
+.oo-bbnw,.oo-bbsw,.oo-bbmw,.oo-bblw,.oo-bhnw,.oo-bhsw,.oo-bhmw,.oo-bhlw,.oo-bvnw,.oo-bvsw,.oo-bvmw,.oo-bvlw,
+.oo-banw,.oo-basw,.oo-bamw,.oo-balw{border-color:#FFFFFF;}
+.oo-blng,.oo-blsg,.oo-blmg,.oo-bllg,.oo-btng,.oo-btsg,.oo-btmg,.oo-btlg,.oo-brng,.oo-brsg,.oo-brmg,.oo-brlg,
+.oo-bbng,.oo-bbsg,.oo-bbmg,.oo-bblg,.oo-bhng,.oo-bhsg,.oo-bhmg,.oo-bhlg,.oo-bvng,.oo-bvsg,.oo-bvmg,.oo-bvlg,
+.oo-bang,.oo-basg,.oo-bamg,.oo-balg{border-color:#CCCCCC;}
+.oo-blnb,.oo-blsb,.oo-blmb,.oo-bllb,.oo-btnb,.oo-btsb,.oo-btmb,.oo-btlb,.oo-brnb,.oo-brsb,.oo-brmb,.oo-brlb,
+.oo-bbnb,.oo-bbsb,.oo-bbmb,.oo-bblb,.oo-bhnb,.oo-bhsb,.oo-bhmb,.oo-bhlb,.oo-bvnb,.oo-bvsb,.oo-bvmb,.oo-bvlb,
+.oo-banb,.oo-basb,.oo-bamb,.oo-balb,.oo-blnw,.oo-blsw,.oo-blmw,.oo-bllw,.oo-btnw,.oo-btsw,.oo-btmw,.oo-btlw,
+.oo-brnw,.oo-brsw,.oo-brmw,.oo-brlw,.oo-bbnw,.oo-bbsw,.oo-bbmw,.oo-bblw,.oo-bhnw,.oo-bhsw,.oo-bhmw,.oo-bhlw,
+.oo-bvnw,.oo-bvsw,.oo-bvmw,.oo-bvlw,.oo-banw,.oo-basw,.oo-bamw,.oo-balw,.oo-blng,.oo-blsg,.oo-blmg,.oo-bllg,
+.oo-btng,.oo-btsg,.oo-btmg,.oo-btlg,.oo-brng,.oo-brsg,.oo-brmg,.oo-brlg,.oo-bbng,.oo-bbsg,.oo-bbmg,.oo-bblg,
+.oo-bhng,.oo-bhsg,.oo-bhmg,.oo-bhlg,.oo-bvng,.oo-bvsg,.oo-bvmg,.oo-bvlg,.oo-bang,.oo-basg,.oo-bamg,.oo-balg{border-style:solid;}
+
+
+/** 
+ * Data Table 
+ * Allows you to align various table cells so that the alignment class can be placed on either the table, table row, or table cell 
+ * Cell takes precedence over table row and table
+ * Table row takes precedence over table
+ */
+.oo-data{position:relative; zoom:1;vertical-align: top;text-align: left; /*border-right:solid 1px transparent;*//* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.oo-data table {width:100%; table-layout:fixed;}
+th, td{/*vertical-align:top;*/}
+/* horizontal alignment */
+.oo-txtC, table .oo-txtC, table tr .oo-txtC{text-align:center;}
+.oo-txtL, table .oo-txtL, table tr .oo-txtL{text-align:left;}
+.oo-txtR, table .oo-txtR, table tr .oo-txtR{text-align:right;}
+/* vertical alignment */
+.oo-txtT, table .oo-txtT, table tr .oo-txtT{vertical-align:top;}
+.oo-txtB, table .oo-txtB, table tr .oo-txtB{vertical-align:bottom;}
+.oo-txtM, table .oo-txtM, table tr .oo-txtM{vertical-align:middle;}
+.oo-data th,.oo-data td{padding:3px 20px}
+
+/* simple table @extends data table */
+.oo-simpleTable{padding: 20px;/* doesn't this break stuff??? ok for win & mac on Safari, FF, chrome, opera. OK on IE6/7/8.   */ }
+.oo-simpleTable table{border:1px solid #AE0345;}
+.oo-simpleTable th, .oo-simpleTable td{border:1px solid #AE0345;}
+.oo-simpleTable thead tr{background-color: #fff0f8;}
+.oo-simpleTable th{color: #000; font-weight:bold}
+/* specification table @extends data table */
+.oo-spec{padding:10px;}
+.oo-spec table{border-top: 1px solid #e2e2e2; border-bottom-color:#fff; border-left:none; border-right:none;}
+.oo-spec th, .oo-spec td{border:1px solid #e2e2e2; border-width: 1px 0; padding-left:0;}
+.oo-spec .oo-odd, .oo-spec .oo-even{background-color: #fff;}

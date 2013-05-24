@@ -1,0 +1,52 @@
+/* **************** UWO custom ***************** */
+.uwo-div-center{margin:0 auto;}
+.uwo-top-nav{background:url("../img/top-nav-bg.jpg") top left repeat-x; height:36px;}
+.uwo-top-nav ul{padding-top:10px;}
+.uwo-top-nav li{padding: 0 5px;border-right:1px solid #FFF;}
+.uwo-top-nav li:last-child{border-right:none;}
+.uwo-top-nav li a{color:#FFFFFF;}
+.uwo-hideme{display:none;}
+#titanServicesLink { background-image: url("quicklinks-gradient.jpg"); background-position: left top; background-repeat: repeat-x; float: right; padding-bottom: 6px; padding-left: 20px; padding-right: 20px; position: relative;}
+#titanServicesLinks { background-color:#333;;border: 1px solid gray; display: none; left: 0; position: absolute; width: 150px; z-index: 300;}
+#titanServicesLinks li { background-image: none !important; float: none !important; margin: 0 !important; padding: 0 !important; text-align: left; border:none; display:block;}
+#titanServicesLinks li a:hover { background-color: gray;}
+#titanServicesLinks li a { color: #FFFFFF; display: block; padding-left: 5px;}
+.uwo-inlineImg{display:inline-block;}
+.uwo-audience-nav{background:url("../img/audience-bg.jpg") top left repeat-x; height:60px;}
+.uwo-audience-nav li{padding-right:5px;}
+.uwo-logo{overflow:visible;z-index:13;}
+/* table extension */
+.uwo-dataTable th, .uwo-dataTable td{font-size: 93%;}
+.uwo-dataTable th{color: #000;}
+.uwo-dataTable td{color: #999;}
+
+/* **************** customizations ***************** */
+html{background:#D79A27 url("../img/background.jpeg") top center no-repeat;}
+.oo-uwo920{width:920px;}
+.oo-page{background-color:#EDECDA;}
+.oo-foot{background-color:#ffffff;}
+/* I don't like the auto left spacing on content elements */
+.body h1,h2,h3,h4,h5,h6,p {margin-left:0;}
+
+#tabs {width:930px;margin:10px;}
+.result {border-top:1px solid #666; min-height:22px;}
+#results .result:first-child {border-top:none;}
+
+/* **************** print styles ***************** */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img, .result { page-break-inside: avoid; }
+  img { display:none; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+  /* hide non results based Items */
+  .uwo-top-nav, .oo-head, .oo-foot, .tabs, .uwo-search, #tab-printed, #tab-info, #results h2, #search-count {display:none;}
+  #tabs {margin:0; width:95%;}
+}

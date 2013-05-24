@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama id="">
+  <view fovmode="0" pannorth="0">
+    <start pan="-135.5" fov="70" tilt="-14.5"/>
+    <min pan="-180" fov="5" tilt="-57.51836340947025"/>
+    <max pan="180" fov="120" tilt="57.51836340947025"/>
+  </view>
+  <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+  <hotspots width="180" height="20" wordwrap="1">
+    <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+    <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+    <hotspot title="Go to the front of court 1" target="" pan="-46.4515" skinid="" url="../1front/1front.html" id="1front" tilt="-6.23981"/>
+    <hotspot title="Go to the back of court 1" target="" pan="-87.7" skinid="" url="../1back/1back.html" id="1back" tilt="-4.81173"/>
+    <hotspot title="Go to the other side of the court" target="" pan="-135.736" skinid="" url="../2back/2back.html" id="2back" tilt="-9.02871"/>
+    <hotspot title="Go to the back of court 3" target="" pan="174.14" skinid="" url="../3back/3back.html" id="3back" tilt="-5.54455"/>
+    <hotspot title="Go to the front of court 3" target="" pan="131.38" skinid="" url="../3front/3front.html" id="3front" tilt="-7.24982"/>
+    <hotspot title="Go down stairs" target="" pan="83.73520000000001" skinid="" url="../downstairs/downstairs.html" id="downstairs" tilt="-5.47227"/>
+    <hotspot title="Go to the lobby" target="" pan="83.4648" skinid="" url="../lobby/lobby.html" id="lobby" tilt="1.94368"/>
+    <hotspot title="Go to the overlook" target="" pan="52.9394" skinid="" url="../overlook/overlook.html" id="overlook" tilt="4.78108"/>
+  </hotspots>
+  <media/>
+  <input tile0url="images/2front_o_0.jpg" tile5url="images/2front_o_5.jpg" tilesize="1076" tile4url="images/2front_o_4.jpg" tile3url="images/2front_o_3.jpg" tilescale="1.009293680297398" tile2url="images/2front_o_2.jpg" tile1url="images/2front_o_1.jpg"/>
+  <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+</panorama>

@@ -1,0 +1,165 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+#map_canvas {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#p-label img, #b-label img, #dp-label img, #e-label img, #de-label img, #mp-label img, #fsq-explorer img, #fsq-munchies, #fsq-bookworm, #fsq-quad, #fsq-spirit {
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+#loading {
+    background-color: #000000;
+    background-image: url("http://m.uwosh.edu/api/beta/images/loading.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.75;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.tooltip {
+    background-image: url("http://m.uwosh.edu/api/beta/images/black_arrow.png");
+    color: #FFFFFF;
+    display: none;
+    font-size: 12px;
+    height: 70px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    width: 160px;
+}
+
+#overlay {
+	border-radius: 20px;
+	z-index: 1;
+	position: absolute;
+	top: 90px;
+	right: 20px;
+	width: 20%;
+	height: 300px;
+	background: #2C2C2C;
+	padding: 25px;
+	display: none;
+	overflow: auto;
+}
+
+#overlayContent {
+	color: #FFFFFF;
+}
+
+#overlayContentTitle {
+	color: #FFFFFF;
+}
+
+#overlayContentImage {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#overlayContentImage img {
+	width: 100%;
+}
+
+#overlayContentDescription {
+	padding-top: 10px;
+}
+
+#overlayContentTitle2 {
+	color: #FFFFFF;
+	padding-top: 25px;
+}
+
+#overlayContentAddress p {
+	margin: 0;
+	font-size: 125%;
+}
+
+#closeButton {
+	text-align: right;
+}
+
+#closeButton a {
+	color: #FFFFFF;
+}
+
+#searchOverlay {
+	border-radius: 20px;
+	z-index: 1;
+	position: absolute;
+	top: 90px;
+	left: 80px;
+	width: 18%;
+	height: 300px;
+	background: #2C2C2C;
+	padding: 25px;
+	overflow: auto;
+	display: none;
+}
+
+#searchOverlay li {
+	cursor: hand;
+	cursor: pointer;
+}
+
+.barrel_roll {
+	-webkit-transition: -webkit-transform 4s ease;
+	-webkit-transform: rotate(360deg);
+	-moz-transition: -moz-transform 4s ease;
+	-moz-transform: rotate(360deg);
+	-o-transition: -o-transform 4s ease;
+	-o-transform: rotate(360deg);
+	transition: transform 4s ease;
+	transform: rotate(360deg);
+}
+
+.tourNav > li {
+    margin-right: 15px;
+}
+
+.tourBox {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.tourBox h2 {
+    font-size: 30px;
+}
+.center.navbar .nav,
+.center.navbar .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+}
+
+.center .navbar-inner {
+    text-align:center;
+}
+
+.tourBox .wordmark {
+    float: right;
+    margin-top: -31px;
+    margin-right: 15px;
+}
