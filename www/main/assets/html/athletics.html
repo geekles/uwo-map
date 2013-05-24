@@ -2,4 +2,15 @@
     <h2 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 30px;">Athletics</h2><img src="assets/img/UWO-Wordmark.png" class="wordmark"/>
     <iframe width="560" height="315" src="http://www.youtube.com/embed/EFlUSVWCA-k" frameborder="0" allowfullscreen></iframe>
     <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-top: 10px;">The UW Oshkosh Athletics department supports 21 teams for male and female student-athletes, and has won 54 titles in the last 10 years. Students can participate in baseball, basketball, cross country, football, soccer, swimming and diving, tennis, track and field, wrestling, gymnastics, softball and volleyball. <a href="http://www.uwoshkoshtitans.com/landing/index" target="_blank">Learn more</a>.</p>
+    <p id="ath-label"><a href="#"><img src="http://www.uwosh.edu/map/main/assets/img/buildings.png"> View our athletics facilities</a></p>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#ath-label').click(function () {
+          // add building Markers
+          uwo.map.getAthleticsMarkers();
+          $('.fancybox-close').trigger('click');
+        });
+      });
+    </script>
 </div>

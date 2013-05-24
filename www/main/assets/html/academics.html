@@ -2,4 +2,15 @@
     <h2 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 30px;">Academics</h2><img src="assets/img/UWO-Wordmark.png" class="wordmark"/>
     <iframe width="560" height="315" src="http://www.youtube.com/embed/V4404T_b5No" frameborder="0" allowfullscreen></iframe>
     <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-top: 10px;">Nationally and regionally accredited, UW Oshkosh is among the largest public universities in the state and is committed to providing students with a high-quality affordable education. The University features state-of-the-art academic buildings with modest class sizes that foster one-on-one and collaborative learning with professors. <a href="http://www.uwosh.edu/home/future-students/undergraduate/academics" target="_blank">Learn more</a>.</p>
+    <p id="acad-label"><a href="#"><img src="http://www.uwosh.edu/map/main/assets/img/buildings.png"> View academic buildings at UW Oshkosh</a></p>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#acad-label').click(function () {
+          // add building Markers
+          uwo.map.getAcademicsMarkers();
+          $('.fancybox-close').trigger('click');
+        });
+      });
+    </script>
 </div>

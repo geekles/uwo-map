@@ -2,4 +2,15 @@
     <h2 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 30px;">Campus Life</h2><img src="assets/img/UWO-Wordmark.png" class="wordmark"/>
     <iframe width="560" height="315" src="http://www.youtube.com/embed/8200gB9yrGw" frameborder="0" allowfullscreen></iframe>
     <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-top: 10px;">With 11 residence halls and over 160 student organizations, 21 Division III and 40 intramural leagues, it is easy to stay busy outside of class. Students stop by Reeve Memorial Union where comedians do stand-up, musicians perform concerts and chefs prepare a variety of food. <a href="http://www.uwosh.edu/home/future-students/undergraduate/campus-life" target="_blank">Learn more</a>.</p>
+    <p id="campusl-label"><a href="#"><img src="http://www.uwosh.edu/map/main/assets/img/buildings.png"> View residence halls and areas for student recreation and events</a></p>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#campusl-label').click(function () {
+          // add building Markers
+          uwo.map.getCampusLifeMarkers();
+          $('.fancybox-close').trigger('click');
+        });
+      });
+    </script>
 </div>

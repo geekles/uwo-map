@@ -73,17 +73,13 @@
 
   uwo.map.getAcademicsMarkers = function()
   {
-    var params = {
-      type: 101
-    };
     uwo.util.showLoading();
     $.ajax({
-      url: uwo.map.apiUrl+'2.0/map/getmarkers?callback=?',
+      url: uwo.map.apiUrl+'2.0/map/getacademicsmarkers?callback=?',
       cache: false,
       dataType: "jsonp",
-      data: params,
       success: function(results){
-        uwo.map.proccessBuildingMarkers(results);
+        uwo.map.proccessAcademicsMarkers(results);
       },
       error: function (request, status, error) { alert(status + ", " + error); }
     });
@@ -121,6 +117,195 @@
 
     uwo.util.hideLoading();
   };
+
+  uwo.map.getAthleticsMarkers = function()
+  {
+    uwo.util.showLoading();
+    $.ajax({
+      url: uwo.map.apiUrl+'2.0/map/getathleticsmarkers?callback=?',
+      cache: false,
+      dataType: "jsonp",
+      success: function(results){
+        uwo.map.proccessAthleticsMarkers(results);
+      },
+      error: function (request, status, error) { alert(status + ", " + error); }
+    });
+  };
+
+  /**
+   * Process Building markers
+   * Params {Object} results, {String} type
+   * Return
+   */
+  uwo.map.proccessAthleticsMarkers = function(results)
+  {
+    var markers = results;
+
+    var image = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/buildings.png',
+      new google.maps.Size(32.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+      );
+    var shadow = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/shadow.png',
+      new google.maps.Size(51.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+    );
+
+    for (var key in markers) {
+      uwo.map.createMarker(markers[key],image,shadow,uwo.map.buildingMarkers);
+    }
+
+    for (var marker in uwo.map.buildingMarkers) {
+      if (uwo.map.buildingMarkers[marker]) {
+        uwo.map.buildingMarkers[marker].setMap(uwo.map.map);
+        }
+    }
+
+    uwo.util.hideLoading();
+  };
+
+  uwo.map.getCampusLifeMarkers = function()
+  {
+    uwo.util.showLoading();
+    $.ajax({
+      url: uwo.map.apiUrl+'2.0/map/getcampuslifemarkers?callback=?',
+      cache: false,
+      dataType: "jsonp",
+      success: function(results){
+        uwo.map.proccessCampusLifeMarkers(results);
+      },
+      error: function (request, status, error) { alert(status + ", " + error); }
+    });
+  };
+
+  /**
+   * Process Building markers
+   * Params {Object} results, {String} type
+   * Return
+   */
+  uwo.map.proccessCampusLifeMarkers = function(results)
+  {
+    var markers = results;
+
+    var image = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/buildings.png',
+      new google.maps.Size(32.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+      );
+    var shadow = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/shadow.png',
+      new google.maps.Size(51.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+    );
+
+    for (var key in markers) {
+      uwo.map.createMarker(markers[key],image,shadow,uwo.map.buildingMarkers);
+    }
+
+    for (var marker in uwo.map.buildingMarkers) {
+      if (uwo.map.buildingMarkers[marker]) {
+        uwo.map.buildingMarkers[marker].setMap(uwo.map.map);
+        }
+    }
+
+    uwo.util.hideLoading();
+  };
+
+  uwo.map.getCampusServicesMarkers = function()
+  {
+    uwo.util.showLoading();
+    $.ajax({
+      url: uwo.map.apiUrl+'2.0/map/getcampusservicesmarkers?callback=?',
+      cache: false,
+      dataType: "jsonp",
+      success: function(results){
+        uwo.map.proccessCampusServicesMarkers(results);
+      },
+      error: function (request, status, error) { alert(status + ", " + error); }
+    });
+  };
+
+  /**
+   * Process Building markers
+   * Params {Object} results, {String} type
+   * Return
+   */
+  uwo.map.proccessCampusServicesMarkers = function(results)
+  {
+    var markers = results;
+
+    var image = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/buildings.png',
+      new google.maps.Size(32.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+      );
+    var shadow = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/shadow.png',
+      new google.maps.Size(51.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+    );
+
+    for (var key in markers) {
+      uwo.map.createMarker(markers[key],image,shadow,uwo.map.buildingMarkers);
+    }
+
+    for (var marker in uwo.map.buildingMarkers) {
+      if (uwo.map.buildingMarkers[marker]) {
+        uwo.map.buildingMarkers[marker].setMap(uwo.map.map);
+        }
+    }
+
+    uwo.util.hideLoading();
+  };
+
+  uwo.map.getAcademicServicesMarkers = function()
+  {
+    uwo.util.showLoading();
+    $.ajax({
+      url: uwo.map.apiUrl+'2.0/map/getacademicservicesmarkers?callback=?',
+      cache: false,
+      dataType: "jsonp",
+      success: function(results){
+        uwo.map.proccessAcademicServicesMarkers(results);
+      },
+      error: function (request, status, error) { alert(status + ", " + error); }
+    });
+  };
+
+  /**
+   * Process Building markers
+   * Params {Object} results, {String} type
+   * Return
+   */
+  uwo.map.proccessAcademicServicesMarkers = function(results)
+  {
+    var markers = results;
+
+    var image = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/buildings.png',
+      new google.maps.Size(32.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+      );
+    var shadow = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/shadow.png',
+      new google.maps.Size(51.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+    );
+
+    for (var key in markers) {
+      uwo.map.createMarker(markers[key],image,shadow,uwo.map.buildingMarkers);
+    }
+
+    for (var marker in uwo.map.buildingMarkers) {
+      if (uwo.map.buildingMarkers[marker]) {
+        uwo.map.buildingMarkers[marker].setMap(uwo.map.map);
+        }
+    }
+
+    uwo.util.hideLoading();
+  };
+
   /**
    * Make data call for Disability Entrance markers
    * Params {String} markerType
@@ -335,6 +520,7 @@ $(function () {
   },function () {
     // remove building markers
     uwo.map.removeMarkerSet(uwo.map.buildingMarkers);
+    uwo.map.buildingMarkers = [];
   });
 
   $('#de-label').toggle(function () {
@@ -352,7 +538,34 @@ $(function () {
     // remove building markers
     uwo.map.removeMarkerSet(uwo.map.emergMarkers);
   });
+
+  $('#clear-all').click(function () {
+    uwo.map.removeMarkerSet(uwo.map.buildingMarkers);
+    uwo.map.removeMarkerSet(uwo.map.dEntryMarkers);
+    uwo.map.removeMarkerSet(uwo.map.emergMarkers);
+    uwo.map.removeMarkerSet(uwo.map.searchMarkers);
+    uwo.map.removeMarkerSet(uwo.map.parkingMarkers);
+    uwo.map.removeMarkerSet(uwo.map.disabilityMarkers);
+    uwo.map.removeMarkerSet(uwo.map.meterParkingMarkers);
+    uwo.map.buildingMarkers = [];
+    uwo.map.dEntryMarkers = [];
+    uwo.map.emergMarkers = [];
+    uwo.map.searchMarkers = [];
+    uwo.map.parkingMarkers = [];
+    uwo.map.disabilityMarkers = [];
+    uwo.map.meterParkingMarkers = [];
+  })
   // set base poygons
   uwo.map.setBasePolygons();
 
 });
+
+/*$(document).on('click', '#acad-label', function() {
+    $('#acad-label').toggle(function () {
+      // add building Markers
+      uwo.map.getAcademicsMarkers();
+    },function () {
+      // remove building markers
+      uwo.map.removeMarkerSet(uwo.map.buildingMarkers);
+    });
+  });*/
