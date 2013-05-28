@@ -7,6 +7,8 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('#acad-label').click(function () {
+          // Clear existing markers
+          uwo.map.clearAllMarkers();
           // add building Markers
           uwo.map.getAcademicsMarkers();
           $('.fancybox-close').trigger('click');
