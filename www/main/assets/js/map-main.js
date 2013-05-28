@@ -507,6 +507,23 @@
     //clear out the array
     uwo.map.searchMarkers = 0;
   }
+
+  uwo.map.clearAllMarkers = function() {
+    uwo.map.removeMarkerSet(uwo.map.buildingMarkers);
+    uwo.map.removeMarkerSet(uwo.map.dEntryMarkers);
+    uwo.map.removeMarkerSet(uwo.map.emergMarkers);
+    uwo.map.removeMarkerSet(uwo.map.searchMarkers);
+    uwo.map.removeMarkerSet(uwo.map.parkingMarkers);
+    uwo.map.removeMarkerSet(uwo.map.disabilityMarkers);
+    uwo.map.removeMarkerSet(uwo.map.meterParkingMarkers);
+    uwo.map.buildingMarkers = [];
+    uwo.map.dEntryMarkers = [];
+    uwo.map.emergMarkers = [];
+    uwo.map.searchMarkers = [];
+    uwo.map.parkingMarkers = [];
+    uwo.map.disabilityMarkers = [];
+    uwo.map.meterParkingMarkers = [];
+  }
 }());
 
 /**
@@ -540,20 +557,7 @@ $(function () {
   });
 
   $('#clear-all').click(function () {
-    uwo.map.removeMarkerSet(uwo.map.buildingMarkers);
-    uwo.map.removeMarkerSet(uwo.map.dEntryMarkers);
-    uwo.map.removeMarkerSet(uwo.map.emergMarkers);
-    uwo.map.removeMarkerSet(uwo.map.searchMarkers);
-    uwo.map.removeMarkerSet(uwo.map.parkingMarkers);
-    uwo.map.removeMarkerSet(uwo.map.disabilityMarkers);
-    uwo.map.removeMarkerSet(uwo.map.meterParkingMarkers);
-    uwo.map.buildingMarkers = [];
-    uwo.map.dEntryMarkers = [];
-    uwo.map.emergMarkers = [];
-    uwo.map.searchMarkers = [];
-    uwo.map.parkingMarkers = [];
-    uwo.map.disabilityMarkers = [];
-    uwo.map.meterParkingMarkers = [];
+    uwo.map.clearAllMarkers();
   })
   // set base poygons
   uwo.map.setBasePolygons();
