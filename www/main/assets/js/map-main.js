@@ -306,6 +306,100 @@
     uwo.util.hideLoading();
   };
 
+  uwo.map.getSustainMarkers = function()
+  {
+    uwo.util.showLoading();
+    $.ajax({
+      url: uwo.map.apiUrl+'2.0/map/getsustainmarkers?callback=?',
+      cache: false,
+      dataType: "jsonp",
+      success: function(results){
+        uwo.map.proccessSustainMarkers(results);
+      },
+      error: function (request, status, error) { alert(status + ", " + error); }
+    });
+  };
+
+  /**
+   * Process Building markers
+   * Params {Object} results, {String} type
+   * Return
+   */
+  uwo.map.proccessSustainMarkers = function(results)
+  {
+    var markers = results;
+
+    var image = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/buildings.png',
+      new google.maps.Size(32.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+      );
+    var shadow = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/shadow.png',
+      new google.maps.Size(51.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+    );
+
+    for (var key in markers) {
+      uwo.map.createMarker(markers[key],image,shadow,uwo.map.buildingMarkers);
+    }
+
+    for (var marker in uwo.map.buildingMarkers) {
+      if (uwo.map.buildingMarkers[marker]) {
+        uwo.map.buildingMarkers[marker].setMap(uwo.map.map);
+        }
+    }
+
+    uwo.util.hideLoading();
+  };
+
+  uwo.map.getRestroomMarkers = function()
+  {
+    uwo.util.showLoading();
+    $.ajax({
+      url: uwo.map.apiUrl+'2.0/map/getrestroommarkers?callback=?',
+      cache: false,
+      dataType: "jsonp",
+      success: function(results){
+        uwo.map.proccessRestroomMarkers(results);
+      },
+      error: function (request, status, error) { alert(status + ", " + error); }
+    });
+  };
+
+  /**
+   * Process Building markers
+   * Params {Object} results, {String} type
+   * Return
+   */
+  uwo.map.proccessRestroomMarkers = function(results)
+  {
+    var markers = results;
+
+    var image = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/buildings.png',
+      new google.maps.Size(32.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+      );
+    var shadow = new google.maps.MarkerImage('http://m.uwosh.edu/api/beta/images/shadow.png',
+      new google.maps.Size(51.0, 37.0),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(16.0, 18.0)
+    );
+
+    for (var key in markers) {
+      uwo.map.createMarker(markers[key],image,shadow,uwo.map.buildingMarkers);
+    }
+
+    for (var marker in uwo.map.buildingMarkers) {
+      if (uwo.map.buildingMarkers[marker]) {
+        uwo.map.buildingMarkers[marker].setMap(uwo.map.map);
+        }
+    }
+
+    uwo.util.hideLoading();
+  };
+
   /**
    * Make data call for Disability Entrance markers
    * Params {String} markerType

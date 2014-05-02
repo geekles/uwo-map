@@ -49,13 +49,13 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="http://www.uwosh.edu/home"><img src="./assets/img/admin-logo.png"></a>
-          <div class="nav-collapse">
+          <div class="nav-collapse top-nav">
             <ul class="nav">
               <li><a href="http://www.uwosh.edu/home">UWO Home</a></li>
               <li class="dropdown">
@@ -65,12 +65,14 @@
                		Find Locations
                		<b class="caret"></b>
                </a>
-               <ul class="dropdown-menu">
+               <ul class="dropdown-menu location-dropdown">
                		<li id="p-label"><img title="toggle parking lots" src="./assets/img/parking.png"> Toggle Parking Lots</li>
                		<li id="dp-label"><img title="toggle accessible parking markers"  src="./assets/img/disability.png"> Toggle Accessible Parking</li>
                		<li id="de-label"><img title="toggle accessible entry markers" src="./assets/img/entry.png"> Toggle Accessible Entries</li>
                		<li id="b-label"><img title="toggle building markers" src="./assets/img/buildings.png"> Toggle Building Markers</li>
                		<li id="e-label"><img title="toggle emergency phone markers" src="./assets/img/bluephone.png"> Toggle Emergency Phones</li>
+                   <li id="sustain-label"><img title="toggle sustainability points of interest" src="./assets/img/sustainability-icon.png"> Toggle Sustainability Points of Interest</li>
+                   <li id="restroom-label"><img title="toggle gender neutral and family restrooms" src="./assets/img/gender-neutral-bathrooms-icon.png"> Toggle Gender Neutral and Family Restrooms</li>
                </ul>
               </li>
               <li>
@@ -147,12 +149,12 @@
     <div class="navbar navbar-fixed-bottom center">
       <div class="navbar-inner">
         <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".bottom-nav">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <div class="nav-collapse">
+          <div class="nav-collapse bottom-nav">
             <ul class="nav tourNav">
               <li><a class="tour fancybox.ajax" href="./assets/html/introduction.html"><img src="./assets/img/cta/intro_cta.png"/></a></li>
               <li><a class="tour fancybox.ajax" id="academics" href="./assets/html/academics.html"><img src="./assets/img/cta/academics_cta.png"/></a></li>
@@ -224,6 +226,28 @@
       setTimeout(function() {
         $("#b-label").trigger('click');
       },10);
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#sustain-label').click(function () {
+        // Clear existing markers
+        uwo.map.clearAllMarkers();
+        // add building Markers
+        uwo.map.getSustainMarkers();
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#restroom-label').click(function () {
+        // Clear existing markers
+        uwo.map.clearAllMarkers();
+        // add building Markers
+        uwo.map.getRestroomMarkers();
+      });
     });
   </script>
 
